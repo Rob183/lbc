@@ -1,0 +1,5 @@
+#ignore all weights files due to their size
+*.weights
+
+#ignore pycache directory
+__pycache__

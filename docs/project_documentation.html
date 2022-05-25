@@ -1,0 +1,691 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Projektbericht</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n684"><a class="md-toc-inner" href="#projektbericht">Projektbericht</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n685"><a class="md-toc-inner" href="#allgemein">Allgemein</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n713"><a class="md-toc-inner" href="#motivation--projektidee">Motivation | Projektidee</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n718"><a class="md-toc-inner" href="#verfügbare-lebensmittel">Verfügbare Lebensmittel </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n721"><a class="md-toc-inner" href="#herausforderungen-und-erfahrungen">Herausforderungen und Erfahrungen</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n735"><a class="md-toc-inner" href="#resultate">Resultate</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n736"><a class="md-toc-inner" href="#organisation-des-bildmaterials">Organisation des Bildmaterials</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n738"><a class="md-toc-inner" href="#training-einer-objekterkennung">Training einer Objekterkennung</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n740"><a class="md-toc-inner" href="#zeitaufwand">Zeitaufwand </a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n742"><a class="md-toc-inner" href="#average-precision">Average Precision</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n900"><a class="md-toc-inner" href="#python-api--backend">Python API | Backend</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n924"><a class="md-toc-inner" href="#flutter-app">Flutter App</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n938"><a class="md-toc-inner" href="#aufgabenverteilung">Aufgabenverteilung</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n939"><a class="md-toc-inner" href="#anton">Anton</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n982"><a class="md-toc-inner" href="#clemens">Clemens</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1009"><a class="md-toc-inner" href="#robert">Robert</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1036"><a class="md-toc-inner" href="#sebastian">Sebastian</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1099"><a class="md-toc-inner" href="#nimrod">Nimrod</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1122"><a class="md-toc-inner" href="#fazit">Fazit</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1126"><a class="md-toc-inner" href="#quellen">Quellen</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1162"><a class="md-toc-inner" href="#referenzen-und-tools">Referenzen und Tools</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n1200"><a class="md-toc-inner" href="#anhang">Anhang</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1201"><a class="md-toc-inner" href="#installation-und-nutzung">Installation und Nutzung</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1204"><a class="md-toc-inner" href="#anleitungen">Anleitungen</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1206"><a class="md-toc-inner" href="#organisation-des-bildmaterials-n1206">Organisation des Bildmaterials</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n1207"><a class="md-toc-inner" href="#nutzen-von-gelabelten-material">Nutzen von gelabelten Material</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n1259"><a class="md-toc-inner" href="#labeln-eigener-bilder">Labeln eigener Bilder</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1347"><a class="md-toc-inner" href="#training-der-objekterkennung">Training der Objekterkennung</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1349"><a class="md-toc-inner" href="#flask">Flask</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1355"><a class="md-toc-inner" href="#alternative-design-entwürfe">Alternative Design-Entwürfe</a></span></p></div><hr /><h1><a name="projektbericht" class="md-header-anchor"></a><span>Projektbericht</span></h1><h2><a name="allgemein" class="md-header-anchor"></a><span>Allgemein</span></h2><ul><li><p><span>Team: LBC | Food Object Detector</span></p></li><li><p><span>Gruppe: </span></p><ul><li><span>Anton Diettrich (18MIB-1)</span></li><li><span>Clemens Berkenhoff (18MIB-2)</span></li><li><span>Robert Seidel (18MIB-2)</span></li><li><span>Sebastian Primm (18MIB-2)</span></li><li><span>Nimrod Mugzach (18MIB-2, seit 08.01.2021)</span></li></ul></li><li><p><span>Kurs: Grundlagen der erweiterten und virtuellen Realität (VR/AR)</span></p></li><li><p><span>Semester 2020/2021</span></p></li><li><p><span>Download (Hinweis: für Stabilität und Sicherheit dieser Version übernehmen wir keine Verantwortung):</span></p><ul><li><a href="/static/source_code.zip" download><span>Source Code</span></a></li><li><a href="/static/app.apk" download><span>APK</span></a></li></ul></li></ul><h2><a name="motivation--projektidee" class="md-header-anchor"></a><span>Motivation | Projektidee</span></h2><p><span>Unsere Anwendung &quot;LBC | Food Object Detector&quot; soll es ermöglichen, Lebensmittel über das Kamerabild zu erkennen und darüber einen virtuellen Korb an Zutaten zu füllen. Dieser bildet die Grundlage für die Suche nach Rezepten, welche auf diesen Zutaten basieren.  Hinsichtlich des Aufwands für die Organisation des Bildmaterials und der Zeitdauer des Trainings des Models, ist die Erkennung dabei zunächst auf verschiedene Obst- und Gemüsesorten beschränkt. Eine Liste verfügbarer Elemente ist nachfolgend zu finden. Für das Training des Object Detectors verwenden wir YoloV4 und Google Colaboratory, für das Laden und Anwenden des Models kommt schließlich OpenCV zum Einsatz. Ein besonderes Augenmerk liegt hierbei auf der Erforschung von Effizienz und Zeitaufwand der Objekterkennung. </span></p><p><span>Grundlage unseres Backends bildet eine in Python geschriebene Flask Web Application, Über diese API wird unser Front End mit Daten versorgt und die Objekterkennung abgewickelt. Weiterhin erfolgt hier die Anbindung der Spoonacular API, um nach passenden Rezepten auf Basis der Zutaten zu suchen.</span></p><p><span>Für die Realisierung unserer Frontends verwenden wir Googles UI Toolkit Flutter, maßgeblich für die Entwicklung einer Applikation für Android und iOS. Jene App greift auf die genannte API zu und definiert entsprechend ausgetauschte Daten.</span></p><p><span>Wir haben uns für dieses Projekt entschieden, da bereits eigenes Interesse an einer Objekterkennung und dem dafür erforderlichen Training bestand, sich allerdings noch keine passende Gelegenheit dafür geboten hatte. Da im Vorjahr (VR/AR 2019/2020) mit dem Projekt &quot;Traffic Sign Detection&quot; eine technologisch ähnliche Idee umgesetzt werden konnte, bestand nun hier der passende Rahmen. Weiterhin haben wir uns für die Erkennung von Lebensmitteln entschieden, da dies etwa bereits in smarten Kühlschränken umgesetzt wird. </span></p><h2><a name="verfügbare-lebensmittel" class="md-header-anchor"></a><span>Verfügbare Lebensmittel </span></h2><p><span>Nachfolgend ist eine Liste von Lebensmitteln zu finden, die zu Beginn des Projektes für die geplante Objekterkennung ausgewählt wurden. Dabei war vor allem die Verfügbarkeit von geeignetem Bildmaterial maßgeblich. Wie effizient dabei die Erkennung realisiert werden konnte, ist im Abschnitt &quot;Resultate&quot; beschrieben.</span></p><table>
+<tbody>
+<tr>
+<td>Apple</td>
+<td>Cherry</td>
+<td>Peach</td>
+</tr>
+<tr>
+<td>Artichoke</td>
+<td>Cucumber</td>
+<td>Pear</td>
+</tr>
+<tr>
+<td>Asparagus</td>
+<td>Garlic</td>
+<td>Pineapple</td>
+</tr>
+<tr>
+<td>Avocado</td>
+<td>Grape</td>
+<td>Pomegranate</td>
+</tr>
+<tr>
+<td>Banana</td>
+<td>Grapefruit</td>
+<td>Potato</td>
+</tr>
+<tr>
+<td>Bell Pepper</td>
+<td>Kiwi</td>
+<td>Pumpkin</td>
+</tr>
+<tr>
+<td>Blueberry</td>
+<td>Lemon</td>
+<td>Raspberry</td>
+</tr>
+<tr>
+<td>Broccoli</td>
+<td>Mango</td>
+<td>Strawberry</td>
+</tr>
+<tr>
+<td>Cabbage</td>
+<td>Orange</td>
+<td>Tomato</td>
+</tr>
+<tr>
+<td>Carrot</td>
+<td>Watermelon</td>
+<td>Zucchini</td>
+</tr>
+</tbody>
+</table><h2><a name="herausforderungen-und-erfahrungen" class="md-header-anchor"></a><span>Herausforderungen und Erfahrungen</span></h2><ol start='' ><li><p><span>Organisation des Bildmaterials</span></p><p><span>Im Zuge unseres Projektes haben wir eine große Menge an Bildmaterial benötigt. Daher bestand unsere Aufgabe zunächst darin, geeignete Quellen auszumachen und das Material zu beziehen. Wir sind dabei auf Google Open Images Dataset, kaggle.com sowie der Google-Bilder-Suche fündig geworden. Fehlendes Material konnte aus dem privaten Fundus ergänzt werden. Oftmals hat die Anzahl der Bilder für ein einzelnes Element nicht ausgereicht (geplant waren ungefähr 200 Bilder pro Element für das Training und etwa 40 Bilder für die Validierung). Wir konnten allerdings Abhilfe schaffen, indem aus den bestehenden Bildern durch Drehung, Spiegelung oder Einfärben neue Bilder generiert werden konnten. Das haben wir mit dem Tool IrfanView realisiert (siehe Anleitung im Anhang). Beim geladenen Material von Google Open Images Dataset war es zudem nötig, die bereits enthaltenen Labels in das für YoloV4 passende Format zu bringen. Dafür stand uns ein geeignetes Skript zur Umwandlung der Labels zur Verfügung. Der Verweis auf das entsprechende GitHub-Projekt ist ebenfalls im Anhang zu finden. Bei vielen Bildern war ein manuelles Labeln notwendig. Zwar hat die Software LabelImg hier sehr gut Abhilfe geschaffen, insgesamt ist der Prozess aber sehr zeitaufwendig und monoton. Final mussten die Dateien (Bilder und Labels) noch in einer geeigneten Ordnerstruktur organisiert werden. </span></p></li><li><p><span>Training der Objekterkennung</span></p><p><span>Für das Training der Objekterkennung haben wir YoloV4 ausgewählt. Leider findet man recht wenige ausführliche Anleitungen für die Entwicklung eines Models im World Wide Web. Allerdings sind in einem </span><a href='https://youtu.be/mmj3nxGT2YQ'><span>YouTube-Video</span></a><span> fündig geworden, welches auf eine entsprechende Anleitung verlinkt hat. Dieser sind wir anschließend gefolgt und konnten unser eigenes Model Schritt für Schritt entwickeln. Die Herausforderung bestand hierbei darin, dass der Prozess insgesamt sehr zeitaufwendig ist und nicht dezentral, unbeaufsichtigt ablaufen kann. Eine lokale Bearbeitung hätte hier wenig Sinn gemacht, da unsere Hardware in ihrer (Grafik-)Rechenleistung begrenzt ist und weiterhin ein hoher Energiebedarf bestanden hätte. Im Zuge der Anleitung haben wir so die Ausführung in Google Colaboratory verlegt, einer Plattform für die Ausführung von Python Code unter der Zuhilfenahme von Google eigenen GPUs wie der NVIDIA K80. Dies hat die Bearbeitung enorm beschleunigt, wobei allerdings die Ausführung auf etwa fünf Stunden pro Tag begrenzt war. Insgesamt war der Prozess aber gut nachzuvollziehen. Wir haben für Interessierte die Anleitung übersetzt und auf die wichtigsten Inhalte gekürzt, zu finden im Projektordner unter </span><code>docs/colab</code><span> und beschrieben im Anhang.</span></p></li><li><p><span>Programmierung des Backends</span></p><p><span>Keiner der Teammitglieder hatte bereits Erfahrung bei der Entwicklung von Web Applications mit Hilfe von Flask in Python. So war es also nötig, entsprechende Anleitungen und Dokumentationen zu sichten und daraus unsere API zu formulieren. Nach kurzer Einarbeitung gelang dies aber recht einfach und konnte zunächst lokal gestartet und getestet werden. Jedem Teilnehmer aber das Starten und Verwalten des Backends einzeln aufzuerlegen ist eine sehr unbequeme Lösung. Ein zentrales Hosting war hier zweckmäßiger, wofür wir pythonanywhere.com ausgewählt haben. Diese Plattform bietet zahlreiche Templates (u.a. für Flask Web Apps), einen guten Support und ist in der Grundvariante kostenfrei nutzbar.  So konnten wir das Backend nicht nur für alle konsistent halten, sondern auch einen einfachen Zugriff aus unserer App heraus herstellen. Für die Rezeptsuche haben wir die Spoonacular API eingebunden, da diese aber über ein eigenes Python Package verfügt und damit Installation und Nutzung problemlos möglich waren. Das kostenlose Modell lässt dabei eine Suche nach etwa 140 Rezepten täglich zu, was für unsere Zwecke absolut ausreichend war.</span></p></li><li><p><span>App-Konzeption / App-Entwicklung</span></p><p><span>Zwei Teammitglieder hatten in diesem Semester das Modul &quot;Mobile Computing&quot; belegt, in dem die App-Entwicklung mit Flutter thematisiert wurde. Die Programmierung hat sich dort allerdings meist nur auf einzelne Ansichten oder ausgewählte Komponenten bezogen. Im Zuge unseres Projektes war es allerdings nötig mehrere Ansichten zu erstellen, zu verwalten und ein zentrales Datenhandling sowie Abarbeiten von Funktionen einzurichten. Es galt also, sich tiefer in Flutter / Dart einzuarbeiten und das fehlende Wissen über entsprechende Dokumentation, Videos, Anleitungen etc. zu ergänzen. Diejenigen, die nicht an diesem Kurs teilgenommen haben, konnten auf einen Udemy-Kurs zurückgreifen. Es hat sich insgesamt ein guter Lernfortschritt gezeigt.</span></p></li></ol><h2><a name="resultate" class="md-header-anchor"></a><span>Resultate</span></h2><h3><a name="organisation-des-bildmaterials" class="md-header-anchor"></a><span>Organisation des Bildmaterials</span></h3><p><span>Ausgehend von der oben genannten Liste an Lebensmitteln haben wir von verschiedenen Plattformen Bildmaterial sammeln können. Bei 30 Elementen und etwa 240 Bildern pro Element, die sich aufteilen auf 200 Bilder für das Training und 40 Bilder für die Validierung, entspricht das einem Gesamtumfang von etwa 7200 Bildern. Rund 80% dieser Bilder stammen dabei vom Google Open Images Dataset. Diese waren bereits gelabelt und es musste lediglich eine Umwandlung in das passende Format erfolgen. Die restlichen Bilder (Avocado, Blueberry, Cherry, Garlic, Kiwi, Raspberry) wurden manuell organisiert und gelabelt, was einen hohen Zeitaufwand bedeutete. Sofern möglich, sollte daher vorgelabeltes Material verwendet werden.</span></p><h3><a name="training-einer-objekterkennung" class="md-header-anchor"></a><span>Training einer Objekterkennung</span></h3><p><span>Dank der oben genannten Video-Anleitung und dem zugrunde liegenden Google-Colabs-File hat sich das Training des Models mit dem One-Stage-Object-Detector-Model </span><a href='https://arxiv.org/abs/2004.10934'><span>YoloV4</span></a><span> relativ einfach gestaltet. Die Tabelle &quot;Average Precision&quot; zeigt allerdings, dass die Genauigkeit unseres Models in einigen Fällen ziemlich schlecht ausfällt, wobei uns nicht näher bekannt ist, welche Gründe hier tatsächlich zugrunde liegen. Das hatte zur Folge, dass Elemente in einigen Bildern nicht oder fälschlicherweise erkannt wurden. Mögliche Probleme könnten sein, dass die Anzahl der Bilder oder die Trainingsdauer zu gering gewählt wurden, die Parameter des Trainings besser angepasst hätten werden müssen oder möglichweise die Labels fehlerhaft bzw. ungenau waren. Ein exakten Vergleich hätte man nur durch das Training eines neues Detektors anstellen können, allerdings zeigt sich (siehe Zeitaufwand), dass dies eine sehr zeitintensive Angelegenheit gewesen wäre.</span></p><h4><a name="zeitaufwand" class="md-header-anchor"></a><span>Zeitaufwand </span></h4><p><span>Eine genaue Dokumentation der Trainingsdauer hat nicht stattgefunden. Es sei an der Stelle gesagt, dass das Training in einem Zeitraum von etwa zwei Wochen zu je etwa fünf Stunden pro Tag durchgeführt wurde. Dies spiegelt etwa die täglich maximale Trainingsdauer seitens Google Colab wieder. Da jeweils aktuelle Zwischenstände in Google Drive hinterlegt wurden, konnte das Training beliebig wieder aufgenommen werden. Zuletzt wurden 40.000 Iterationen erreicht.</span></p><h4><a name="average-precision" class="md-header-anchor"></a><span>Average Precision</span></h4><p><span>Die folgenden Werte wurden dem Auswertungstool von YoloV4 Darknet entnommen (entsprechender Befehl ist in der Anleitung enthalten). Diejenigen Elemente, die manuell gelabelt werden mussten, erreichten im Mittel eine bessere Erkennungsrate. Als Threshold bei der Erkennung wurde der Wert 0.5 gewählt.</span></p><figure><table><thead><tr><th><span>Klasse</span></th><th><span>Average Precision (%)</span></th><th><span>True Positives</span></th><th><span>False Positives</span></th></tr></thead><tbody><tr><td><span>Apple</span></td><td><span>49.52</span></td><td><span>50</span></td><td><span>30</span></td></tr><tr><td><span>Artichoke</span></td><td><span>55.73</span></td><td><span>16</span></td><td><span>9</span></td></tr><tr><td><span>Asparagus</span></td><td><span>66.50</span></td><td><span>12</span></td><td><span>1</span></td></tr><tr><td><span>Avocado</span></td><td><span>56.69</span></td><td><span>61</span></td><td><span>13</span></td></tr><tr><td><span>Banana</span></td><td><span>54.41</span></td><td><span>11</span></td><td><span>8</span></td></tr><tr><td><span>Bell Pepper</span></td><td><span>22.53</span></td><td><span>19</span></td><td><span>21</span></td></tr><tr><td><span>Blueberry</span></td><td><span>48.11</span></td><td><span>83</span></td><td><span>67</span></td></tr><tr><td><span>Broccoli</span></td><td><span>42.32</span></td><td><span>17</span></td><td><span>19</span></td></tr><tr><td><span>Cabbage</span></td><td><span>71.23</span></td><td><span>18</span></td><td><span>15</span></td></tr><tr><td><span>Carrot</span></td><td><span>41.31</span></td><td><span>16</span></td><td><span>28</span></td></tr><tr><td><span>Cherry</span></td><td><span>76.88</span></td><td><span>65</span></td><td><span>33</span></td></tr><tr><td><span>Cucumber</span></td><td><span>26.85</span></td><td><span>33</span></td><td><span>57</span></td></tr><tr><td><span>Garlic</span></td><td><span>84.32</span></td><td><span>136</span></td><td><span>30</span></td></tr><tr><td><span>Grape</span></td><td><span>27.20</span></td><td><span>41</span></td><td><span>18</span></td></tr><tr><td><span>Grapefruit</span></td><td><span>26.74</span></td><td><span>29</span></td><td><span>69</span></td></tr><tr><td><span>Kiwi</span></td><td><span>70.04</span></td><td><span>50</span></td><td><span>25</span></td></tr><tr><td><span>Lemon</span></td><td><span>49.33</span></td><td><span>41</span></td><td><span>27</span></td></tr><tr><td><span>Mango</span></td><td><span>44.75</span></td><td><span>6</span></td><td><span>10</span></td></tr><tr><td><span>Orange</span></td><td><span>02.24</span></td><td><span>6</span></td><td><span>92</span></td></tr><tr><td><span>Peach</span></td><td><span>27.70</span></td><td><span>17</span></td><td><span>28</span></td></tr><tr><td><span>Pear</span></td><td><span>42.16</span></td><td><span>11</span></td><td><span>37</span></td></tr><tr><td><span>Pineapple</span></td><td><span>70.76</span></td><td><span>17</span></td><td><span>4</span></td></tr><tr><td><span>Pomegranate</span></td><td><span>32.93</span></td><td><span>7</span></td><td><span>16</span></td></tr><tr><td><span>Potato</span></td><td><span>31.71</span></td><td><span>18</span></td><td><span>20</span></td></tr><tr><td><span>Pumpkin</span></td><td><span>72.69</span></td><td><span>36</span></td><td><span>11</span></td></tr><tr><td><span>Raspberry</span></td><td><span>84.38</span></td><td><span>49</span></td><td><span>19</span></td></tr><tr><td><span>Strawberry</span></td><td><span>52.78</span></td><td><span>105</span></td><td><span>49</span></td></tr><tr><td><span>Tomato</span></td><td><span>27.52</span></td><td><span>30</span></td><td><span>27</span></td></tr><tr><td><span>Watermelon</span></td><td><span>57.36</span></td><td><span>19</span></td><td><span>11</span></td></tr><tr><td><span>Zucchini</span></td><td><span>19.88</span></td><td><span>15</span></td><td><span>29</span></td></tr></tbody></table></figure><h3><a name="python-api--backend" class="md-header-anchor"></a><span>Python API | Backend</span></h3><p><span>Nach Einarbeitung in Flask und Python konnte das Backend relativ schnell aufgesetzt werden. Durch die Möglichkeit der lokalen Ausführung waren das Testen und Anpassen der Anwendung leicht möglich, bevor sie zu PythonAnywhere übertragen wurde. Die Einbindung in der Flutter App durch JSON als Datenaustauschformat war ebenso einfach.</span></p><p><span>Für unser Backend haben wir folgende Endpunkte / Routes gewählt:</span></p><figure><table><thead><tr><th style='text-align:center;' ><span>Endpoint</span></th><th style='text-align:center;' ><span>Beschreibung</span></th><th style='text-align:center;' ><span>Rückgabeformat (Bsp.)</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><span>&#39;&#39;/&#39;&#39;</span></td><td style='text-align:center;' ><span>liefert die Homepage des Projektes zurück</span></td><td style='text-align:center;' ><span>HTML</span></td></tr><tr><td style='text-align:center;' ><span>&quot;/joke&quot;</span></td><td style='text-align:center;' ><span>liefert einen Food-Joke von Spoonacular zurück</span></td><td style='text-align:center;' ><span>{&quot;joke&quot;: &quot;Something funny...&quot;}</span></td></tr><tr><td style='text-align:center;' ><span>&quot;/detection&quot;</span></td><td style='text-align:center;' ><span>nimmt ein Bild als Eingabe und liefert die gefundenen Objekte als Array zurück</span></td><td style='text-align:center;' ><span>{&quot;detections&quot;: [{&quot;class&quot;: &quot;Banana&quot;, &quot;confidence&quot;: 0.75}]}</span></td></tr><tr><td style='text-align:center;' ><span>&quot;/recipe/...&quot;</span></td><td style='text-align:center;' ><span>nimmt einen String von kommagetrennten Zutaten als Eingabe und liefert gefundene Spoonacular-Rezepte zurück</span></td><td style='text-align:center;' ><a href='https://spoonacular.com/food-api/docs#Search-Recipes-by-Ingredients' target='_blank' class='url'>https://spoonacular.com/food-api/docs#Search-Recipes-by-Ingredients</a></td></tr></tbody></table></figure><h3><a name="flutter-app" class="md-header-anchor"></a><span>Flutter App</span></h3><p><span>Die Applikation steht als APK und in Form des Source Codes zur Installation auf Android bereit. Entsprechende Hinweise zur Installation und Nutzung finden sich im Anhang. Mangels entsprechender Hardware konnte die iOS-Variante nicht getestet werden, obwohl Flutter diese Version ebenso bereitstellt. </span></p><p><strong><span>Design zur Projektabgabe | 26.03.2021</span></strong></p><p><img src="/static/draft012.png" style="zoom:14%;margin-top: 40px" /><span> </span><img src="/static/draft013.png" style="zoom:14%;margin-top: 40px" /><span> </span><img src="/static/draft014.png" style="zoom:14%;margin-top: 40px" /><span> </span><img src="/static/draft015.png" style="zoom:14%;margin-top: 40px" /><span> </span></p><p><strong><span>Anwendungsbeispiele:</span></strong></p><ul><li><span>Objekterkennung am Beispiel einer Erdbeere</span></li><li><span>Rezeptsuche auf Basis von drei Zutaten inkl. Detailansicht</span></li><li><span>Sortieren der Rezeptvorschläge nach Anzahl der Likes</span></li></ul><div style="display: flex; flex-wrap: wrap;">
+  <video controls="true" allowfullscreen="true" width="240" style="padding: 10px">
+    	<source src="/static/detection_example.mp4" type="video/mp4">
+  </video>
+  <video controls="true" allowfullscreen="true" width="240" style="padding: 10px">
+    <source src="/static/search_recipes_example.mp4" type="video/mp4">
+  </video>
+  <video controls="true" allowfullscreen="true" width="240" style="padding: 10px">
+    <source src="/static/sorting_example.mp4" type="video/mp4">
+  </video>
+</div><h2><a name="aufgabenverteilung" class="md-header-anchor"></a><span>Aufgabenverteilung</span></h2><h3><a name="anton" class="md-header-anchor"></a><span>Anton</span></h3><p><strong><span>Vorkenntnisse:</span></strong></p><p><span>Meine Vorkenntnisse bezüglich dieses Projektes weiten sich im größten Teil auf die allgemeine Entwicklung von Software aus. Konkret gesagt hatte ich vor dem Projekt gute Kenntnisse und Erfahrungen im Programmieren von interaktiven Web-Applications mit API-Anbindung in den Sprachen JavaScript (React-Framework) und Java (Spring-Framework). Was App Entwicklung angeht, waren meine Vorkenntnisse begrenzt auf ein Projekt in der nativen Android-Entwicklung mit Kotlin.</span></p><p><strong><span>Aufgabenbereiche und Zeitaufwand:</span></strong></p><figure><table><thead><tr><th><span>Bereich</span></th><th><span>Beitrag</span></th><th><span>Zeit in h</span></th></tr></thead><tbody><tr><td><span>Organisation des Bildmaterials</span></td><td><span>Organisation der Datensätze (Herunterladen von Bildern aus der Google Open Image Datensammlung. Fehlende Bilder von Google Bilder geholt und selbst mit Labeln versehen)</span></td><td><span>5</span></td></tr><tr><td><span>Organisation des Bildmaterials</span></td><td><span>Manuelles Labeln von heruntergeladenen Bildern mittels Software LabelImg</span></td><td><span>4</span></td></tr><tr><td><span>Training der Objekterkennung</span></td><td><span>Training eines Models mit Hilfe von YoloV4 in Google Colab</span></td><td><span>10</span></td></tr><tr><td><span>Python API / Backend</span></td><td><span>Beratung bei der Aufsetzung der Python API</span></td><td><span>2</span></td></tr><tr><td><span>App-Entwicklung mit Flutter</span></td><td><span>Integration verschiedenster Funktionen in App-UI (Pop-Up-Nachricht, Dropdown etc.)</span></td><td><span>15</span></td></tr><tr><td><span>Projektorganisation</span></td><td><span>Organisations- und Technologie-Meetings (Regelmäßige Treffen in denen Technologien und organisatorische Sachen festgelegt wurden)</span></td><td><span>4</span></td></tr><tr><td><span>Projektorganisation</span></td><td><span>Präsentationsausarbeitung</span></td><td><span>2</span></td></tr><tr><td><span>Projektorganisation</span></td><td><span>Projektbericht schreiben</span></td><td><span>1</span></td></tr></tbody></table></figure><p><strong><span>Lernerfahrungen:</span></strong></p><p><span>Die meiste Lernerfahrung habe ich im grundlegenden Ablauf des Trainierens eines Objekterkennungs-Models mit YoloV4 gemacht. Ebenfalls habe ich in Python während der Backend-Arbeit einen Großteil der Syntax gelernt. Das Umgehen mit dem Google-Colab-Angebot habe ich auch mitgenommen. In Flutter habe ich den Grundaufbau der App gelernt und die Architekturgrundlage dieser Technologie. Des Weiteren habe ich meine allgemeinen Kenntnisse in der Softwareentwicklung weiter gefestigt.</span></p><h3><a name="clemens" class="md-header-anchor"></a><span>Clemens</span></h3><p><strong><span>Vorkenntnisse:</span></strong></p><p><span>Im Laufe des Studiums habe ich Programmierkenntnisse in verschiedenen Sprachen aufgebaut (u.a. C++, Python, Java). Im Softwareprojekt im 3. und 4. Semester habe ich außerdem gelernt mich in einer Arbeitsumgebung im Team einzubringen. Des Weiteren bilde ich mich privat in die Richtung Webdevelopment und -design weiter.</span></p><p><strong><span>Aufgabenbereiche und Zeitaufwand:</span></strong></p><figure><table><thead><tr><th><span>Bereich</span></th><th><span>Beitrag</span></th><th><span>Zeit in h</span></th></tr></thead><tbody><tr><td><span>Organisation des Bildmaterials</span></td><td><span>manuelles Labeln von Bildmaterial (Blaubeere und Kirsche inkl. Download und Formatierung)</span></td><td><span>10</span></td></tr><tr><td><span>Training der Objekterkennung</span></td><td><span>tagesabhängiges Einspringen, um Training zu starten und zu überwachen</span></td><td><span>5</span></td></tr><tr><td><span>App-Entwicklung mit Flutter</span></td><td><span>Erstellen eines Corperate Designs und eines Mockups mit Adobe XD bestehend aus fünf Screens (siehe Anhang)</span></td><td><span>8</span></td></tr><tr><td><span>App-Entwicklung mit Flutter</span></td><td><span>Entwicklung zweier Rezept-Screens (Übersicht der Rezepte sowie Detailansicht einzelner Rezepte) mit Hilfe von Flutter und Dart, Mockup konnte weitestgehend einfließen</span></td><td><span>30</span></td></tr></tbody></table></figure><p><strong><span>Lernerfahrungen:</span></strong></p><p><span>Ich habe gelernt, wie man Objekte in Bildern labeln und so eine Objekterkennung trainieren und validieren kann. Außerdem habe ich die Funktions- und Vorgehensweise des Trainings eines Objektmodells gelernt. Ich habe einen grundsätzlichen Einblick in die Mockup-Anwendung Adobe XD bekommen und gelernt, wie man einfache Mockups erstellen kann. Zu guter Letzt habe ich die Programmiersprache Dart unter Nutzung des UI-Toolkits Flutter gelernt und wie man mit diesen genannten Tools eine App aufbaut und entwickelt. Insgesamt hat mir das Projekt sehr viel Freude bereitet und ich habe viele hilfreiche Dinge gelernt.</span></p><h3><a name="robert" class="md-header-anchor"></a><span>Robert</span></h3><p><strong><span>Vorkenntnisse:</span></strong></p><p><span>Ich habe im 5. Fachsemester das Modul &quot;Mobile Computing&quot; als Wahlpflichtfach belegt. Dort haben wir die Grundlagen für Flutter gelernt. Des Weiteren konnte ich einige Fähigkeiten aus dem Modul &quot;Computeranimation&quot; anwenden.</span></p><p><strong><span>Aufgabenbereiche und Zeitaufwand:</span></strong></p><figure><table><thead><tr><th><span>Bereich</span></th><th><span>Beitrag</span></th><th><span>Zeit in h</span></th></tr></thead><tbody><tr><td><span>Training der Objekterkennung</span></td><td><span>YoloV4-Training in Google Colab</span></td><td><span>3</span></td></tr><tr><td><span>App-Entwicklung mit Flutter</span></td><td><span>Implementation der Ladeanimation bei der Bildanalyse</span></td><td><span>3</span></td></tr><tr><td><span>App-Entwicklung mit Flutter</span></td><td><span>Entwurf des Logos</span></td><td><span>1</span></td></tr><tr><td><span>App-Entwicklung mit Flutter</span></td><td><span>Design und Implementation von Komponenten in Flutter</span></td><td><span>3</span></td></tr></tbody></table></figure><p><strong><span>Lernerfahrungen:</span></strong></p><p><span>Eine vollständige App zu entwickeln, hat mir einen Überblick über die Arbeit als Entwickler gegeben. Mein Wissen über Flutter hat sich weiterentwickelt und mich gleichzeitig motiviert, weiter in diesem Bereich zu arbeiten.</span></p><h3><a name="sebastian" class="md-header-anchor"></a><span>Sebastian</span></h3><p><strong><span>Vorkenntnisse:</span></strong></p><p><span>Durch die Teilnahme am Modul &quot;Softwareprojekt&quot; im vergangenen Semester konnte ich bereits Erfahrungen in der Programmierung mit Java sowie der Versionskontrolle und -verwaltung mit Hilfe von Git bekommen. Über das in diesem Semester (2020/2021) stattfindende Modul &quot;Mobile Computing&quot; habe ich Googles UI Toolkit Flutter kennenlernen können. Privat habe ich bereits mit der Programmiersprache Python experimentiert u.a. auch im Bereich maschinelles Lernen. </span></p><p><strong><span>Aufgabenbereiche und Zeitaufwand:</span></strong></p><figure><table><thead><tr><th><span>Bereich</span></th><th style='text-align:center;' ><span>Beitrag</span></th><th style='text-align:center;' ><span>Zeit in h</span></th></tr></thead><tbody><tr><td><span>Organisation des Bildmaterials</span></td><td style='text-align:center;' ><span>Recherche nach und Laden von Datensätzen von Google Open Images Dataset, kaggle.com, Bildersuchmaschinen wie google.com oder Material aus dem privaten Fundus</span></td><td style='text-align:center;' ><span>4</span></td></tr><tr><td><span>Organisation des Bildmaterials</span></td><td style='text-align:center;' ><span>Umwandeln der Labels in das für YoloV4 erforderliche Format (ein entsprechendes Skript ist in der Anleitung im Anhang verlinkt)</span></td><td style='text-align:center;' ><span>0.5</span></td></tr><tr><td><span>Organisation des Bildmaterials</span></td><td style='text-align:center;' ><span>manuelles Labeln von Bildmaterial mit Hilfe der Software LabelImg</span></td><td style='text-align:center;' ><span>2</span></td></tr><tr><td><span>Organisation des Bildmaterials</span></td><td style='text-align:center;' ><span>Anlegen einer geeigneten Ordnerstruktur sowie Zusammenführung aller Bilder und Labels nach Umwandlung in das geeignete Format</span></td><td style='text-align:center;' ><span>0.5</span></td></tr><tr><td><span>Training der Objekterkennung</span></td><td style='text-align:center;' ><span>Training eines Models mit Hilfe von YoloV4 in Google Colab (Ausführung und Überwachung des Trainings)</span></td><td style='text-align:center;' ><span>10</span></td></tr><tr><td><span>Training der Objekterkennung</span></td><td style='text-align:center;' ><span>Kürzung und Übersetzung der zugrunde liegenden englischen Anleitung (enthält nun für uns wesentliche Schritte und kann beispielsweise für zukünftige Projekte verwendet werden)</span></td><td style='text-align:center;' ><span>2</span></td></tr><tr><td><span>Python API / Backend</span></td><td style='text-align:center;' ><span>Aufsetzen einer Flask Web Application (Initialisierung, Binden von Funktionen an Routes/Endpoints, Auswahl geeigneter Datenformate, Rückgabewerte etc.)</span></td><td style='text-align:center;' ><span>5</span></td></tr><tr><td><span>Python API / Backend</span></td><td style='text-align:center;' ><span>Realisierung von Laden und Ausführen eines vortrainierten Models mit Hilfe von OpenCV für die Objekterkennung</span></td><td style='text-align:center;' ><span>5</span></td></tr><tr><td><span>Python API / Backend</span></td><td style='text-align:center;' ><span>Hosten des Backends auf pythonanywhere.com (Einrichtung, Verwaltung, Sicherheitsregeln, Sync mit Stand im Git)</span></td><td style='text-align:center;' ><span>3</span></td></tr><tr><td><span>App-Entwicklung mit Flutter</span></td><td style='text-align:center;' ><span>Aufsetzen einer grundlegenden Projektstruktur, Entwicklung und Anpassung verschiedener UI-Komponenten, Designanpassungen, Datenhandling</span></td><td style='text-align:center;' ><span>18</span></td></tr><tr><td><span>App-Entwicklung mit Flutter</span></td><td style='text-align:center;' ><span>Einbinden der Python API mit entsprechend ansprechbaren Funktionen im Data Provider</span></td><td style='text-align:center;' ><span>9</span></td></tr><tr><td><span>Projektorganisation</span></td><td style='text-align:center;' ><span>Aufgabenverteilung, Technologieauswahl und Dokumentation / Erklärungen, Ausarbeiten von Anleitungen für Teammitglieder und zukünftig Interessierte (siehe Anhang), Versionsverwaltung mit Git (u.a. Merges)</span></td><td style='text-align:center;' ><span>6</span></td></tr><tr><td><span>Projektorganisation</span></td><td style='text-align:center;' ><span>Präsentationen, Projektbericht</span></td><td style='text-align:center;' ><span>7</span></td></tr></tbody></table></figure><p><strong><span>Lernerfahrungen:</span></strong></p><p><span>Durch das Projekt konnte ich die wesentlichen Schritte zur Entwicklung einer Objekterkennung mit Hilfe von YoloV4 kennenlernen. Weiterhin habe ich Einblicke in die Entwicklung einer Python API und dem dazugehörigen Hosting erlangt und konnte durch die Entwicklung unseres Frontends mit Hilfe von Flutter meine Erkenntnisse zusätzlich zur Teilnahme am oben genannten Kurs vertiefen. Durch die &quot;Leitung&quot; des Projekts konnte ich Erfahrungen sammeln, die etwa die Auswahl und Dokumentation geeigneter Technologien oder die Verwaltung des Codes in Git betreffen. Ich hatte insgesamt viel Freude am Projekt.</span></p><h3><a name="nimrod" class="md-header-anchor"></a><span>Nimrod</span></h3><p><strong><span>Vorkenntnisse:</span></strong></p><p><span>Im Kurs &quot;App-Konzeption und -Design&quot; konnte ich bereits im Anwendungsdesign mit Adobe XD Erfahrungen sammeln.</span></p><p><strong><span>Aufgabenbereiche und Zeitaufwand:</span></strong></p><figure><table><thead><tr><th><span>Bereich</span></th><th><span>Beitrag</span></th><th><span>Zeit in h</span></th></tr></thead><tbody><tr><td><span>App-Entwicklung mit Flutter</span></td><td><span>Konzeption und Design der App mit Adobe XD (siehe Anhang)</span></td><td><span>15</span></td></tr><tr><td><span>App-Entwicklung mit Flutter</span></td><td><span>2D-Modellierung / 2D-Animation (Ladeanimation während Objekterkennung)</span></td><td><span>10</span></td></tr><tr><td><span>App-Entwicklung mit Flutter</span></td><td><span>Programmieren mit Dart und Flutter (o.g. Animation, Design-Anpassungen)</span></td><td><span>10</span></td></tr></tbody></table></figure><p><strong><span>Lernerfahrungen:</span></strong></p><p><span>Durch das Projekt konnte ich Kenntnisse in der 2D-Animation mit Hilfe von Blender und Unity sammeln und mein Verständnis für Flutter und Dart vertiefen. Weiterhin konnte ich durch den Kurs &quot;VR/AR&quot; allgemein ein besseres Verständnis für VR-Technologien aufbauen.</span></p><h2><a name="fazit" class="md-header-anchor"></a><span>Fazit</span></h2><p><span>Insgesamt sind wir sehr zufrieden mit dem Ergebnis des Projektes. Wir hatten die Möglichkeit verschiedene Technologien, Packages, Bibliotheken, Toolkits und Dienste kennenzulernen und damit zu arbeiten. Als Ergebnis haben wir eine eigenständige App und ein Backend inkl. Object Detection Model erhalten. Obwohl die Genauigkeit dieses Models nicht immer zufriedenstellend war, konnten eigene Tests zeigen, dass der Detektor per se funktioniert. Wir hatten viel Freude am Projekt und sind überzeugt, dass unsere Erkenntnisse und Erfahrungen für die Zukunft hilfreich sind.</span></p><p><span>Stand: 26.03.2021 </span></p><hr /><h2><a name="quellen" class="md-header-anchor"></a><span>Quellen</span></h2><p><strong><span>Icons der Flutter App</span></strong></p><p><span>Die Publisher der Icons auf Flaticon erlauben deren Nutzung unter Nennung des Urhebers. Die URL verweist dementsprechend auf den Künstler.</span></p><figure><table><thead><tr><th><span>Icon</span></th><th><span>URL</span></th></tr></thead><tbody><tr><td><span>Asparagus, Avocado, Broccoli, Cabbage, Carrot, Cherry, Cucumber, Grape, Kiwi, Orange, Peach, Pear, Pomegranate, Potato, Raspberry, Strawbery, Watermelon, Zucchini</span></td><td><a href='https://www.flaticon.com/authors/freepik' target='_blank' class='url'>https://www.flaticon.com/authors/freepik</a></td></tr><tr><td><span>Apple, Bell Pepper, Blueberry, Garlic, Mango, Pumpkin, Tomato</span></td><td><a href='https://www.flaticon.com/authors/icongeek26' target='_blank' class='url'>https://www.flaticon.com/authors/icongeek26</a></td></tr><tr><td><span>Artichoke</span></td><td><a href='https://www.flaticon.com/authors/monkik' target='_blank' class='url'>https://www.flaticon.com/authors/monkik</a></td></tr><tr><td><span>Banana, Pineapple</span></td><td><a href='https://www.flaticon.com/authors/dinosoftlabs' target='_blank' class='url'>https://www.flaticon.com/authors/dinosoftlabs</a></td></tr><tr><td><span>Grapefruit</span></td><td><a href='https://www.flaticon.com/authors/smashicons' target='_blank' class='url'>https://www.flaticon.com/authors/smashicons</a></td></tr><tr><td><span>Lemon</span></td><td><a href='https://www.flaticon.com/authors/wanicon' target='_blank' class='url'>https://www.flaticon.com/authors/wanicon</a></td></tr><tr><td><span>Like</span></td><td><a href='https://www.flaticon.com/authors/those-icons' target='_blank' class='url'>https://www.flaticon.com/authors/those-icons</a></td></tr></tbody></table></figure><p><strong><span>Background Images der Flutter App</span></strong></p><figure><table><thead><tr><th><span>Bild</span></th><th><span>URL</span></th></tr></thead><tbody><tr><td><span>Tomatoes</span></td><td><a href='https://unsplash.com/photos/EPwuZxdketc' target='_blank' class='url'>https://unsplash.com/photos/EPwuZxdketc</a></td></tr></tbody></table></figure><h2><a name="referenzen-und-tools" class="md-header-anchor"></a><span>Referenzen und Tools</span></h2><ul><li><p><span>Organisation des Bildmaterials</span></p><ul><li><a href='https://storage.googleapis.com/openimages/web/index.html'><span>Google Open Images Dataset</span></a></li><li><a href='https://www.kaggle.com/'><span>Kaggle</span></a></li><li><a href='https://github.com/tzutalin/labelImg'><span>LabelImg</span></a></li><li><a href='https://www.irfanview.com/'><span>IrfanView</span></a></li><li><a href='https://github.com/theAIGuysCode/OIDv4_ToolKit'><span>OIDv4 Toolkit</span></a></li></ul></li><li><p><span>Training des Objektdetektors</span></p><ul><li><a href='https://youtu.be/mmj3nxGT2YQ'><span>Video zu YoloV4 in Google Colab</span></a><span> (mit Verweis auf das GitHub-Projekt und die ursprüngliche Anleitung)</span></li><li><a href='https://arxiv.org/abs/2004.10934'><span>YoloV4 Paper</span></a></li></ul></li><li><p><span>App-Entwicklung mit Flutter + Backend</span></p><ul><li><a href='https://flutter.dev/'><span>Flutter</span></a></li><li><a href='https://rive.app/'><span>Rive</span></a></li><li><a href='https://eu.pythonanywhere.com/'><span>PythonAnywhere</span></a></li><li><a href='https://flask.palletsprojects.com/en/1.1.x/'><span>Flask</span></a></li><li><a href='https://opencv-tutorial.readthedocs.io/en/latest/yolo/yolo.html'><span>YoloV4 mit OpenCV verwenden</span></a></li><li><a href='https://spoonacular.com/food-api'><span>Spoonacular API</span></a></li></ul></li></ul><hr /><h1><a name="anhang" class="md-header-anchor"></a><span>Anhang</span></h1><h2><a name="installation-und-nutzung" class="md-header-anchor"></a><span>Installation und Nutzung</span></h2><p><span>Während es in älteren Versionen von Android genügt hat, zur Installation einfach die APK der Applikation auf das betreffende Android-Gerät zu übertragen und den entsprechenden Hinweisen zu folgen, ist dies mit den aktuelleren Android-Versionen nicht mehr so einfach möglich. Die Installation der APK wird etwa durch das Fehlen von geeigneten Signaturen abgebrochen, selbst wenn die Installation aus Fremdquellen explizit erlaubt wurde. In dem Fall bleibt nur die Installation der Anwendung über den Flutter Lifecycle. Für entsprechende Hinweise verweisen wir daher auf: </span><a href='https://flutter.dev/docs/get-started/install' target='_blank' class='url'>https://flutter.dev/docs/get-started/install</a><span>. Nach entsprechender Einrichtung gelingt ein Übertragen der App auf einen Emulator oder ein reales Gerät ziemlich einfach.</span></p><p><img src="/static/manual_1.png" style="zoom:20%; margin-top: 20px" /><span> </span><img src="/static/manual_2.png" style="zoom:20%; margin-top: 20px" /><span> </span><img src="/static/manual_3.png" style="zoom:20%; margin-top: 20px" /></p><h2><a name="anleitungen" class="md-header-anchor"></a><span>Anleitungen</span></h2><p><span>Da wir uns im Verlauf des Projektes stets darum bemüht haben, die Wahl der Technologien, Bibliotheken etc. sowie die für die Entwicklung maßgeblichen Schritte transparent und nachvollziehbar zu halten und dafür unter entsprechendem Aufwand Anleitungen erstellt haben, möchten wir nun im Anhang auf diese verweisen. </span></p><h3><a name="organisation-des-bildmaterials-n1206" class="md-header-anchor"></a><span>Organisation des Bildmaterials</span></h3><h4><a name="nutzen-von-gelabelten-material" class="md-header-anchor"></a><span>Nutzen von gelabelten Material</span></h4><p><span>In einigen Fällen findet sich bereits Bildmaterial mit dazugehörigen Labels. Wir haben dazu </span><a href='https://storage.googleapis.com/openimages/web/index.html'><span>Google Open Images Dataset</span></a><span> gewählt. In der aktuellen Variante V6 können Elemente in bis zu 600 Kategorien eingeordnet werden.</span></p><p><strong><span>Download</span></strong></p><p><span>Für den Download der gewünschten Kategorien bietet sich das </span><a href='https://github.com/theAIGuysCode/OIDv4_ToolKit'><span>OIDv4 Tookit</span></a><span> an.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">git</span> clone https://github.com/theAIGuysCode/OIDv4_ToolKit.git</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><p><span>Für die Ausführung werden einige Packages benötigt. Diese können im Verzeichnis des Toolkits mit folgendem Befehl installiert werden. Eventuell bietet es sich an, eine virtuelle Umgebung (etwa mit virtualenv) zu erstellen.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pip3 install <span class="cm-attribute">-r</span> requirements.txt</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><p><span>Für unser Projekt benötigen wir etwa 240 Bilder pro Klasse/Objekt. Davon entfallen 200 auf das Training und 40 auf das Validieren. Je nach Projekt kann die Anzahl an Bildern natürlich variieren.</span></p><p><span>Zunächst laden wir die Bilder für das Training (hier bspw. Bilder der Klasse Apfel):</span></p><p><strong><span>Hinweise: </span></strong></p><ul><li><span>besteht der Name eines Elementes aus mehreren Wörtern, etwa </span><em><span>Bell Pepper</span></em><span>, ist der Klassenname in Anführungszeichen einzufügen</span></li><li><span>beim ersten Verwenden ist der Download von benötigten CSV-Dateien erforderlich, hier die entsprechende Meldung einfach bestätigen</span></li></ul><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">python3 main.py downloader <span class="cm-attribute">--classes</span> Apple <span class="cm-attribute">--type_csv</span> train <span class="cm-attribute">--limit</span> <span class="cm-number">200</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><p><span>Unter </span><code>train</code><span> findet sich nun ein Ordner </span><code>Apple</code><span> mit dem Unterordner </span><code>Label</code><span>. </span>
+<strong><span>Achtung: Diese Label befinden sich noch nicht im passenden Format für YOLO. Die Umwandlung erfolgt aber später.</span></strong></p><p><span>Nun folgen die Bilder für das Validieren:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">python3 main.py downloader <span class="cm-attribute">--classes</span> Apple <span class="cm-attribute">--type_csv</span> validation <span class="cm-attribute">--limit</span> <span class="cm-number">40</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><p><span>Das Toolkit bietet auch die Möglichkeit, mehrere Klassen auf einmal anzugeben und herunterzuladen. Dafür gibt man einfach mehrere Klassen an und setzt zusätzlich </span><code>--multiclasses 1</code><span>. Bei der Nutzung hat sich allerdings herausgestellt, dass hierdurch ein Abbruch des Downloads erfolgen kann. Eventuell entstehende Ordner sind dann zu löschen.</span></p><p><span>Später werden alle Dateien in einem Ordner zusammengeführt. Da unter Umständen in den verschiedenen Ordnern gleiche Dateinamen auftauchen, sollte man eine Umbenennung vornehmen, z.B. Name des Objektes + Nummer. Es ist darauf zu achten, dass sowohl Bild als auch die zugehörige Label-Datei den gleichen Namen tragen.</span></p><p><span>Möchte man prüfen, ob nach dem Umbenennen die Zuordnung der Bilder zu den Labels noch passt, kann man den eingebauten </span><em><span>Visualizer</span></em><span> verwenden:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">python3 main.py visualizer</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><p><strong><span>Umwandeln der Labels</span></strong></p><p><span>Aktuell befinden sich die Labels, in Form der TXT-Dateien, noch im falschen Format für YOLO. Sie enthalten pro Objekt zeilenweise:</span></p><ul><li><span>Name des Objektes z.B. Apple</span></li><li><span>X-Koordinate des oberen linken Eckpunktes</span></li><li><span>Y-Koordinate des oberen linken Eckpunktes</span></li><li><span>X-Koordinate des unteren rechten Eckpunktes</span></li><li><span>Y-Koordinate des unteren rechten Eckpunktes</span></li></ul><p><span>YOLO fordert folgendes Format (wieder pro Objekt und zeilenweise):</span></p><ul><li><span>Index, welcher für den entsprechenden Eintrag in der </span><code>classes.txt</code><span> steht (bei 0 beginnend)</span></li><li><span>X-Koordinate des Mittelpunktes</span></li><li><span>Y-Koordinate des Mittelpunktes</span></li><li><span>halbe Breite des Bildes</span></li><li><span>halbe Höhe des Bilder</span></li></ul><p><span>Als erstes passt man nun den Inhalt der </span><code>classes.txt</code><span> im Toolkit-Ordner an. Hier werden alle zu erkennenden Elemente zeilenweise aufgelistet. Die Reihenfolge sollte im Nachhinein, aufgrund der Zuordnung des Indizes in den Label-Dateien, nicht verändert werden.</span></p><p><span>Die Umwandlung startet man anschließend mit:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">python convert_annotations.py </span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><p><span>Ist der Vorgang für alle Ordner erledigt, sollte zu jedem Bild eine passende TXT-Datei existieren. Den Ordner </span><code>Label</code><span> mit den alten Labeln kann man anschließend löschen. Anschließend ist das gesamte Material (</span><strong><span>jeweils getrennt für Training und Validierung</span></strong><span>) in einem Ordner zusammenzuführen.</span></p><h4><a name="labeln-eigener-bilder" class="md-header-anchor"></a><span>Labeln eigener Bilder</span></h4><p><span>In einigen Fällen findet sich auf der oben genannten oder anderen vergleichbaren Seiten kein passendes Bildmaterial inklusive Label. Möchte man entsprechende Elemente dennoch für sein Modell nutzen, ist das Labeln eigener Bilder erforderlich. Das Labeln sollte zunächst in einem separaten Ordner erfolgen, um Vermischen mit Labeln eines anderen Formates zu vermeiden.</span></p><p><strong><span>Organisation</span></strong></p><p><strong><span>Hinweis:</span></strong><span> Bevorzugt sollte man Formate ohne Transparenzinformationen verwenden, etwa JPG.</span></p><p><span>Hier gibt es verschiedene Möglichkeiten:</span></p><ol start='' ><li><p><span>Nutzung eigener Kamera bzw. des eigenes Smartphones</span></p></li><li><p><span>Manueller Download </span></p></li><li><p><span>Download von Datasets auf </span><a href='https://www.kaggle.com/'><span>Kaggle</span></a><span> (kostenlose Registrierung notwendig)</span></p></li><li><p><span>Nutzung eines Tools zum Download von zum Beispiel Google Images (hierbei auf entsprechende Nutzungsrechte achten)</span></p><p><span>Ein Beispiel wäre die Python-Bibliothek icrawler:</span></p><p><span>Installation mit: </span><code>pip install icrawler</code></p><p><span>Damit der Download von Google Images klappt, muss eventuell noch eine kleine Änderung an der Datei google.py vorgenommen werden. Diese liegt bspw. unter: </span></p><p><code>C:\Users\_username_\AppData\Local\Programs\Python\Python39\Lib\site-packages\icrawler\builtin\google.py</code></p><p><span>Zeile 154 muss man ersetzen mit:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="python"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">txt</span> = <span class="cm-variable">re</span>.<span class="cm-property">sub</span>(<span class="cm-string">r"^AF_initDataCallback\({.*key: 'ds:(\d)'.+data:(.+), sideChannel: {.*}}\);?$"</span>, <span class="cm-string">"\\2"</span>, <span class="cm-variable">txt</span>, <span class="cm-number">0</span>, <span class="cm-variable">re</span>.<span class="cm-property">DOTALL</span>)</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><p><span>Ein simples Programm wäre:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="python"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">from</span> <span class="cm-variable">icrawler</span>.<span class="cm-property">builtin</span> <span class="cm-keyword">import</span> <span class="cm-variable">GoogleImageCrawler</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">google_crawler</span> = <span class="cm-variable">GoogleImageCrawler</span>(<span class="cm-variable">storage</span>={<span class="cm-string">'root_dir'</span>: <span class="cm-string">'hier_könnte_dein_path_stehen'</span>})</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">google_crawler</span>.<span class="cm-property">crawl</span>(<span class="cm-variable">keyword</span>=<span class="cm-string">'himbeere'</span>, <span class="cm-variable">max_num</span>=<span class="cm-number">250</span>)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 115px;"></div><div class="CodeMirror-gutters" style="display: none; height: 115px;"></div></div></div></pre><p><span>Weitere Dokumentation und Beispiele sind hier zu finden: </span><a href='https://pypi.org/project/icrawler/' target='_blank' class='url'>https://pypi.org/project/icrawler/</a></p></li></ol><p><strong><span>Manuelle Nachbearbeitung</span></strong></p><p><span>Für das Training unseres Modells nutzen wir ungefähr 240 Bilder, wovon etwa 200 auf Training und der Rest auf die Validierung entfallen. Für andere Zwecke können diese Zahlen durchaus verschieden sein. Oftmals findet man aber weit weniger Bilder als gewünscht. Allerdings ist es unter Nutzung verschiedenster Tools möglich, aus vorhandenem Material neue Bilder zu erzeugen. Gedrehte, gespiegelte oder neue eingefärbte Bilder können so in das Training mit einfließen ohne eine Redundanz des Materials zu verursachen.</span></p><p><span>Falls genügend Material vorhanden ist, kann der folgende Abschnitt übersprungen werden.</span></p><p><span>Für das Erzeugen neuen Materials bietet sich z.B. das kostenlose Tool </span><a href='https://www.irfanview.de/download-irfanview-64-bit-deutsche-version/'><span>IrfanView</span></a><span> an.</span></p><p><span>Ablauf: </span></p><ol start='' ><li><p><span>Taste &#39;B&#39; oder </span><code>File &gt; Batch Conversion / Rename</code><span> betätigen</span></p></li><li><p><span>oben links </span><code>work as: batch conversion - Raname result files</code><span> anwählen</span></p></li><li><p><span>über die Auswahl rechts den gewünschten Ordner wählen und die Bilder laden (mit </span><code>add</code><span> oder </span><code>add all</code><span>)</span></p></li><li><p><span>bei </span><code>output folder for result files</code><span> </span><code>use current folder</code><span> wählen</span></p></li><li><p><span>sicher stellen, dass bei </span><code>batch conversion settings</code><span> </span><code>.jpg</code><span> als Format gewählt ist</span></p></li><li><p><span>anschließend über die </span><code>advanced</code><span> Einstellungen die gewünschten Modifikationen vornehmen z.B.:</span></p><p><img src="/static/irfanview.png" referrerpolicy="no-referrer" alt="Modifikation über IrfanView"></p></li><li><p><span>mit </span><code>OK</code><span> bestätigen</span></p></li><li><p><span>bei </span><code>batch rename settings</code><span> ein geeignetes Pattern wählen z.B. </span><code>raspberry###</code><span> (unter </span><code>Options</code><span> lässt sich der Counter verändern)</span></p></li><li><p><code>Start Batch</code><span> betätigen</span></p></li><li><p><span>wiederholen bis die gewünschte Anzahl an Bildern erreicht ist</span></p></li><li><p><span>wenn alle Bilder bereit sind, bietet es sich an noch einmal einen Vorgang mit </span><code>Batch rename</code><span> für den gesamten Ordner durchführen, sodass alle Elemente einen einheitlichen Namen + eine entsprechende Nummer haben, also z.B. </span><em><span>raspberry1</span></em><span>, </span><em><span>raspberry2</span></em><span> usw.</span></p></li></ol><p><strong><span>Label erstellen</span></strong></p><p><span>Bevor das eigentliche Labeln beginnt, bietet es sich an, die Bilder nun auf zwei Ordner zu verteilen. 200 Bilder in den Ordner </span><code>train</code><span> sowie 40 in den Ordner </span><code>validation</code><span>. Alternativ kann man das auch nach dem Labeln machen, vermeidet aber auf diese Art und Weise eventuelle Kopierfehler.</span></p><p><span>Für das Labeln verwenden wir das Programm </span><strong><span>LabelImg</span></strong><span>, da es die Möglichkeit bietet, direkt im YOLO-Format abzuspeichern und für Windows, Mac sowie Linux verwendbar ist. Das GitHub Repository findet man unter folgender Adresse: </span><a href='https://github.com/tzutalin/labelImg' target='_blank' class='url'>https://github.com/tzutalin/labelImg</a><span>. Alternativ kann man auch die vorgefertigten Varianten unter </span><a href='https://tzutalin.github.io/labelImg/' target='_blank' class='url'>https://tzutalin.github.io/labelImg/</a><span> verwenden.</span></p><p><span>Ablauf:</span></p><ol start='' ><li><p><span>Anpassen der vordefinierten Klassen unter </span><code>/data/predifined_classes.txt</code>
+<strong><span>Es ist wichtig, dies vor dem Labeln zu erledigen, da die Objekte eines Bildes in der dazugehörigen Textdatei im YOLO-Format über einen Index definiert werden, welcher für einen entsprechenden Eintrag in oben genannter Datei steht. Werden die Einträge also später verändert, passt jene Zuordnung unter Umständen nicht mehr.</span></strong></p></li><li><p><span>Wahl des gewünschten Ordners über </span><code>Open Dir</code></p></li><li><p><span>Ändern des Format auf YOLO durch Klicken auf PascalVOC (PascalVOC erzeugt XML-Dateien, YOLO TXT-Dateien)</span></p></li><li><p><span>mit </span><code>Create RectBox</code><span> kann man nun eine Box um das entsprechende Objekt erzeugen</span></p></li><li><p><span>in der erscheinenden Liste nun das zu erkennende Element wählen</span></p><p><strong><span>Diese Wahl bleibt zwischengespeichert. Beim Labeln vieler Bilder mit gleicher Objektklasse kann man so einfach immer mit </span><code>Enter</code><span> betätigen.</span></strong></p></li><li><p><span>durch Klick auf </span><code>Save</code><span> wird die zum Bild gehörige TXT-Datei gespeichert</span></p></li><li><p><span>über </span><code>Next Image</code><span> gelangt man zum nächsten Bild</span></p></li><li><p><span>diesen Vorgang solange wiederholen bis alle Bilder gelabelt sind</span></p></li></ol><p><img src="/static/labelimg.png" referrerpolicy="no-referrer" alt="LabelImg"></p><p><strong><span>Zur Kontrolle</span></strong><span>: Im betreffenden Ordner sollte nun zu jedem Bild eine entsprechende TXT-Datei zu finden sein. Diese enthält pro zu erkennendem Element zeilenweise folgende Einträge:</span></p><ul><li><span>Index, welcher für den entsprechenden Eintrag in der </span><code>predefined_classes.txt</code><span> steht (bei 0 beginnend)</span></li><li><span>X-Koordinate des Mittelpunktes</span></li><li><span>Y-Koordinate des Mittelpunktes</span></li><li><span>halbe Breite des Bildes</span></li><li><span>halbe Höhe des Bilder</span></li></ul><p><span>Die Koordinaten sowie Höhe und Breite sind normalisiert, liegen daher stets zwischen 0 und 1. Dies soll ermöglichen, dass entsprechende Einträge auch etwa nach einem Skalieren noch gültig sind. Es bietet sich aber trotzdem an, die Bilder bereits vor dem Labeln zu skalieren.</span></p><h3><a name="training-der-objekterkennung" class="md-header-anchor"></a><span>Training der Objekterkennung</span></h3><p><span>Für das Training unserer Objekterkennung  haben wir uns an folgendem Beitrag orientiert:  </span><a href='https://youtu.be/mmj3nxGT2YQ' target='_blank' class='url'>https://youtu.be/mmj3nxGT2YQ</a><span>. Auf Basis jener Anleitung haben wir eine verkürzte und übersetzte Variante aufgesetzt. Diese ist unter </span><code>docs/colab/training.ipynb</code><span> zu finden.</span></p><h3><a name="flask" class="md-header-anchor"></a><span>Flask</span></h3><p><span>Flask ist ein WSGI Web Application Framework. Vorteilhaft ist, dass es keine bestimmte Projektstruktur voraussetzt und wenige Abhängigkeiten besitzt. Weiterhin ist es als Python Package verfügbar und kann über folgenden Befehl leicht installiert und eingebunden werden:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pip install flask</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><p><span>Mit Flask können wir unsere in Python-Code formulierten Funktionen bzw. deren Ausführung an Routes binden. Ein simples Programm wäre beispielsweise:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="python"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">from</span> <span class="cm-variable">flask</span> <span class="cm-keyword">import</span> <span class="cm-variable">Flask</span>, <span class="cm-variable">jsonify</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">app</span> = <span class="cm-variable">Flask</span>(<span class="cm-variable">__name__</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">@app</span>.<span class="cm-property">route</span>(<span class="cm-string">'/'</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">def</span> <span class="cm-def">greet</span>():</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable">jsonify</span>({<span class="cm-string">'message'</span>: <span class="cm-string">"Hello"</span>})</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">if</span> <span class="cm-variable">__name__</span> == <span class="cm-string">'__main__'</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">app</span>.<span class="cm-property">run</span>()</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 230px;"></div><div class="CodeMirror-gutters" style="display: none; height: 230px;"></div></div></div></pre><p><span>Es wird eine Flask App initialisiert und die </span><code>greet()</code><span>-Funktion an die Root-Route (&quot;/&quot;) gebunden. Startet man das Programm kann man unter </span><code>localhost:5000</code><span> das oben stehende JSON-Objekt abrufen. </span></p><h2><a name="alternative-design-entwürfe" class="md-header-anchor"></a><span>Alternative Design-Entwürfe</span></h2><p><strong><span>Initiale Projektvorstellung | November 2020</span></strong></p><p><span class='md-image'><img src="/static/draft006.png" style="zoom:14%; margin-top: 40px; float: left"/></span></p><p><strong><span>Adobe XD Entwurf | Dezember 2020</span></strong></p><p><img src="/static/draft001.png" style="zoom:14%; margin-top: 40px" /><span> </span><img src="/static/draft002.png" style="zoom:14%; margin-top:40px" /><span> </span><img src="/static/draft003.png" style="zoom:14%; margin-top: 40px" /><span> </span><img src="/static/draft004.png" style="zoom:14%; margin-top: 40px" /><span> </span><img src="/static/draft005.png" style="zoom:14%; margin-top: 40px" /></p><p><strong><span>Zwischenstandspräsentation | 11.02.2021</span></strong></p><p><img src="/static/draft011.png" style="zoom:14%; margin-top: 40px" /><span> </span><img src="/static/draft010.png" style="zoom:14%; margin-top: 40px" /><span> </span><img src="/static/draft009.png" style="zoom:14%; margin-top: 40px" /><span> </span><img src="/static/draft008.png" style="zoom:14%; margin-top: 40px" /><span> </span><img src="/static/draft007.png" style="zoom:14%; margin-top: 40px" /><span>  </span></p></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+apple.png 		Icongeek26
+artichoke.png		monkik
+asparagus.png		Freepik
+avocado.png		Freepik
+banana.png		DinosoftLabs
+bellpepper.png		Icongeek26
+blueberry.png		Icongeek26
+broccoli.png		Freepik
+cabbage.png		Freepik
+carrot.png		Freepik
+cherry.png		Freepik
+cucumber.png		Freepik
+garlic.png		Icongeek26
+grape.png		Freepik
+grapefruit.png		Smashicons
+kiwi.png		Freepik
+lemon.png		wanicon
+mango.png		Icongeek26
+orange.png		Freepik
+peach.png		Freepik
+pear.png		Freepik
+pineapple.png		DinosoftLabs
+pomegrante.png		Freepik
+potato.png		Freepik
+pumpkin.png		Icongeek26
+raspberry.png		Freepik
+strawberry.png		Freepik
+tomato.png		Icongeek26
+watermelon.png		Freepik
+zucchini.png		Freepik
+like.png            Those Icons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
